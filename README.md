@@ -8,6 +8,7 @@
 - Default theme supports light and dark modes.
 - Default theme is written in pure HTML and CSS - No JavaScript, anywhere.
 - The homepage of the Web mirror gets a perfect Lighthouse score.
+- Supports inline images (Generated when a URL points to a common image file extension.)
 - It's extremely hackable - Feel free to go crazy with customization.
 
 ## Usage

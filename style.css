@@ -160,6 +160,37 @@ article > h1:first-child::before {
 	content: unset;
 }
 
+.image {
+	width: 100%;
+	padding: 3.5vw;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.image img {
+	max-width: 100%;
+	min-width: 40%;
+	box-shadow: 4px 8px 50px #ccc;
+	border-radius: 11px;
+}
+
+.image p {
+	color: #665;
+	margin-top: 4px;
+	font-style: italic;
+}
+
+article > h1:first-child + .image {
+	padding: 1em 0 2.5em 0;
+	margin: -15px;
+	width: calc(100% + 30px);
+}
+
+article > h1:first-child + .image > img {
+	width: 100%;
+	border-radius: 0;
+}
+
 @media (prefers-color-scheme: dark) {
 	body, article {
 		background-color: black;
@@ -204,5 +235,13 @@ article > h1:first-child::before {
 	blockquote {
 		border-left: 4px solid #ede;
 		color: #ded;
+	}
+
+	.image img {
+		box-shadow: none;
+	}
+
+	.image p {
+		color: #cdc;
 	}
 }

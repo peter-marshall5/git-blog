@@ -74,9 +74,16 @@ function pre_end () {
 }
 
 function link () {
-	local link="$1"; shift
+	local url="$1"; shift
 	local desc="$@"
-	echo "<a href=\"$link\">$desc</a>"
+	case $url in
+		*.jpg | *.png | *.webp )
+			echo "<div class="image"><img src=\"$url\" /><p>$desc</p></div>"
+			;;
+		*)
+			echo "<a href=\"$url\">$desc</a>"
+			;;
+	esac
 }
 
 function paragraph () {
@@ -157,6 +164,7 @@ function generate () {
 }
 
 cp style.css $html_path/
+cp gmi/res/ $html_path/ -r
 cat robots.txt | sed "s/\$DOMAIN/$domain/" > $html_path/robots.txt
 start_index
 find gmi/blog/*.gmi | while read file; do
