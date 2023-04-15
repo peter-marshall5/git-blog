@@ -32,7 +32,7 @@ footer {
 	user-select: none;
 }
 
-.post {
+header.post {
 	padding-top: 12px;
     	padding-bottom: 10px;
 	padding-left: 18px;
@@ -47,21 +47,17 @@ article > h1:first-child {
 	padding-bottom: 8px;
 }
 
-.container {
-	margin: auto;
-	max-width: 100%;
-	width: 60em;
-}
-
 article {
 	padding: 15px;
 	background: white;
 	flex: 1;
 }
 
-/*article > * {
-	margin-left: 24px;
-}*/
+article.post {
+	margin: auto;
+	max-width: 100%;
+	width: 60em;
+}
 
 article > h1, article > h2 {
 	margin-left: 0px;
