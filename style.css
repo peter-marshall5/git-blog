@@ -57,6 +57,7 @@ article.post {
 	margin: auto;
 	max-width: 100%;
 	width: 60em;
+	box-sizing: border-box;
 }
 
 article > h1, article > h2 {
