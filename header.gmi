@@ -1,0 +1,3 @@
+# $NAME
+
+## Index of all posts
