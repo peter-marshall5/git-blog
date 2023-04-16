@@ -167,7 +167,7 @@ cp $html_res/main.css $html_res/home.css $html_res/post.css $html_path/
 cp gmi/res/ $html_path/ -r
 cat $res_dir/robots.txt | sed "s/\$DOMAIN/$domain/" > $html_path/robots.txt
 start_index
-find gmi/blog/*.gmi | sort | while read file; do
+find gmi/blog/*.gmi | sort -r | while read file; do
 	filename=${file/gmi\/blog\//}
 	basename="${filename/.gmi/}"
 	htmlpath="$blog_path/${filename/.gmi/.html}"
