@@ -10,8 +10,6 @@ body {
 }
 
 header {
-	padding: 22px;
-	padding-left: 26px;
 	text-align: left;
 	background: #233;
 	color: white;
@@ -19,6 +17,7 @@ header {
 	margin: 0px;
 	user-select: none;
 	font-weight: bold;
+	position: sticky;
 }
 
 footer {
@@ -32,36 +31,10 @@ footer {
 	user-select: none;
 }
 
-header.post {
-	padding-top: 12px;
-    	padding-bottom: 10px;
-	padding-left: 18px;
-	font-size: 24px;
-	cursor: pointer;
-	position: sticky;
-	top: 0px;
-}
-
-article > h1:first-child {
-	margin-left: 12px;
-	padding-bottom: 8px;
-}
-
 article {
 	padding: 15px;
 	background: white;
 	flex: 1;
-}
-
-article.post {
-	margin: auto;
-	max-width: 100%;
-	width: 60em;
-	box-sizing: border-box;
-}
-
-article > h1, article > h2 {
-	margin-left: 0px;
 }
 
 pre {
@@ -109,22 +82,8 @@ a {
 	position: relative;
 }
 
-a::after {
-	content: '🔗';
-	display: inline-block;
-	margin-left: 8px;
-	width: 20px;
-	transition: .6s;
-	opacity: 70%;
-}
-
 a:hover {
 	color: midnightblue;
-	transform: translateX(2px);
-}
-
-a:hover::after {
-	opacity: 100%;
 }
 
 h1 {
@@ -180,13 +139,13 @@ article > h1:first-child::before {
 	font-style: italic;
 }
 
-article > h1:first-child + .image {
+article > h1:first-child + p + .image {
 	padding: 1em 0 2.5em 0;
 	margin: -15px;
 	width: calc(100% + 30px);
 }
 
-article > h1:first-child + .image > img {
+article > h1:first-child + p + .image > img {
 	width: 100%;
 	border-radius: 0;
 }
@@ -220,18 +179,6 @@ article > h1:first-child + .image > img {
 		text-shadow: 2px 2px 9px #000000;
 	}
 	
-	header.post:after {
-		content: "";
-		background: linear-gradient(to bottom, #000d 0%, transparent 100%);
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 40px;
-		bottom: -40px;
-		left: 0;
-		pointer-events: none;
-	}
-
 	blockquote {
 		border-left: 4px solid #ede;
 		color: #ded;
@@ -243,5 +190,9 @@ article > h1:first-child + .image > img {
 
 	.image p {
 		color: #cdc;
+	}
+
+	footer {
+		background: #0e0e0e;
 	}
 }

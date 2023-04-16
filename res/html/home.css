@@ -1,0 +1,106 @@
+header {
+	padding: 22px;
+	padding-left: 26px;
+	font-size: 30px;
+}
+
+article > div {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	max-width: 1200px;
+	flex-wrap: wrap;
+	text-align: left;
+	margin: auto;
+}
+
+article > div > div {
+	width: calc(100% / 3);
+	height: 160px;
+	box-sizing: border-box;
+	padding: 12px;
+	margin-top: 12px;
+}
+
+@media screen and (max-width: 900px) {
+	article > div > div {
+		width: 100%;
+	}
+
+	header {
+		text-align: center;
+		padding: 60px;
+		font-size: 40px;
+	}
+
+	header span {
+		line-height: 3em;
+	}
+}
+
+article > div > div > a {
+	margin: auto;
+	line-height: 1.3em;
+	text-decoration: none;
+	border-radius: 4px;
+	overflow: hidden;
+	background: #fcfcfe;
+	outline: 1px solid #ddd;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	transition: 0.3s;
+}
+
+article > div > div > a > h2 {
+	font-weight: bold;
+	margin: 0px;
+	line-height: 1.3em;
+	font-size: 18px;
+	margin: 17px;
+	min-height: 2.6em;
+	max-height: 2.6em;
+	transition: max-height 0.4s;
+	overflow: hidden;
+	color: linear-gradient(black 1.3em, transparent);
+}
+
+article > div > div > a:hover {
+	transform: scale(1.03);
+	z-index: 2;
+	color: unset;
+}
+
+article > div > div > a:hover > h2 {
+	max-height: calc(1.3em * 6);
+}
+
+article > div > div > a > h2::before {
+	content: none;
+}
+
+article > div > div > a > p {
+	background: #f3f3f3;
+	color: #556;
+	padding: 17px;
+	margin: 0;
+}
+
+article > div > div > a > p::before {
+	content: "🕑";
+	margin-right: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+	article > div > div > a {
+		background: #111;
+		outline: 1px solid #333;
+		color: white;
+	}
+
+	article > div > div > a > p {
+		background: #171717;
+		color: #aab;
+	}
+}
