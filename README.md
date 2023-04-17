@@ -1,5 +1,3 @@
-# Dead simple SSG for dual-hosting on Gemini and the Web
-
 [Demo hosted on Cloudflare Pages](https://ssg-1cm.pages.dev/)
 
 - Written in Bash - No dependencies other than coreutils.
@@ -15,9 +13,9 @@
 
 ## Usage
 
-Place your Gemtext blog entries in `gmi/blog` and run build.sh to generate the Gemini index and HTML pages. Put images and other files into `gmi/res`.
+Place your Gemtext blog entries in `gmi/blog` and run build.sh to generate the Gemtext index and HTML pages. Put images and other files into `gmi/res`.
 
-You can then point your Gemini server to the `gmi` directory, and your Web server to the `dist` directory.
+You can then point your Web server to the `dist` directory and your Gemini server to the `gmi` directory.
 
 ## Setup with Git and Cloudflare Pages
 
