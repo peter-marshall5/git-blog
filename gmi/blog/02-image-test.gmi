@@ -1,0 +1,12 @@
+# Test for inline images
+April 15, 2023
+
+=> https://my.alfred.edu/zoom/_images/foster-lake.jpg
+
+## Here's another one
+
+=> https://www.bwallpaperhd.com/wp-content/uploads/2021/01/NashPoint.jpg
+
+## Here's one hosted on this server
+
+=> /res/test.jpg Locally-hosted image file
